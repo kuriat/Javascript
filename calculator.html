@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter first number</p>
+    <input type = "text" id = "no1">
+    <p>Enter second number</p>
+    <input type = "text" id = "no2">
+    <br>
+    <p id = "answer"></p>
+    <br>
+    <button id = "add" onclick="add()">Add</button>
+    <button id = "sub" onclick="sub()">subtraction</button>
+    <button id = "mul" onclick="mul()">multiply</button>
+    <button id = "div" onclick="div()">division</button>
+    
+    <script>
+        function add()
+        {
+            var result = Number(document.getElementById("no1").value) + Number(document.getElementById("no2").value)
+            document.getElementById("answer").innerHTML = result
+        }
+        function sub()
+        {
+            var result = Number(document.getElementById("no1").value) - Number(document.getElementById("no2").value)
+            document.getElementById("answer").innerHTML = result
+        }
+        function mul()
+        {
+            var result = Number(document.getElementById("no1").value) * Number(document.getElementById("no2").value)
+            document.getElementById("answer").innerHTML = result
+        }
+        function div()
+        {
+            var result = Number(document.getElementById("no1").value) / Number(document.getElementById("no2").value)
+            document.getElementById("answer").innerHTML = result
+        }
+    </script>
+</body>
+</html>

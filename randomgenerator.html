@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hello there, a  rounded random number will be displayed 10 times and then will the date.</h3>
+    <br>
+    <script>
+        for(i = 0; i < 10; i ++){
+            var rndnumber = Math.floor(Math.random()*100);
+            document.write(rndnumber + "<br>")
+        }
+        var NewDate = new Date();
+        document.write( " <br> The date is the " + NewDate.getDate())
+    </script>
+</body>
+</html>

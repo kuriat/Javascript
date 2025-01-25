@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Name and Number Sorter</h2>
+    <p>This will print out only words and reject anything else</p>
+    <p id="result"></p>
+    <script>
+        
+        function Sorter() {
+            
+            let argsArray = Array.from(arguments);
+            
+         
+            let stringsOnly = argsArray.filter(item => typeof item === "string");
+            
+            
+            document.getElementById("result").innerHTML = stringsOnly.join(", ");
+        }
+        
+        // Example usage
+        Sorter("Hello", 2, 3, "Bob", "Name");
+    </script>
+</body>
+
+</html>

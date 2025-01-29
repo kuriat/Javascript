@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Here is an object, a array that has been popped and joined</h2>
+    <p id = "first"></p>
+    <p id = "second"></p>
+    <p id = "join"></p>
+    <p id = "pop"></p>
+    <p id = "pop2"></p>
+
+    <script>
+        var car = {brand:"Audi", model:"Q7", color:"Grey", age:2}
+        document.getElementById("first").innerHTML = car.brand;
+        var animals = ["cat", "dog", "chicken", "cow", "lion", "tiger"]
+        document.getElementById("second").innerHTML = animals[2]
+        document.getElementById("join").innerHTML = animals.join("....")
+        animals.pop()
+        document.getElementById("pop").innerHTML = animals
+        animals.pop()
+        document.getElementById("pop").innerHTML = animals
+    </script>
+</body>
+</html>

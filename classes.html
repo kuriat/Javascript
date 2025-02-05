@@ -5,13 +5,30 @@
 </head>
 <body>
     <script>
-          class Students{
-            constructor(name, age ,year_level){
+        class Students {
+            constructor(name, age, year_level) {
                 this.name = name;
                 this.age = age;
                 this.year_level = year_level;
             }
-          }
+            intro(){
+                return "Hi, my name is " + this.name + ", I am " + this.age + " and am in " + this.year_level + "<br>"
+            }
+            static pass(year_level) {
+                let mark = Math.floor(Math.random() * 1500);
+                if (mark >= (1500 / 2)) {
+                    return "<br>" + "You passed with a " + mark + " out of 1500";
+                } else {
+                    return "You failed. I'm afraid you'll have to sit " + year_level + " again.";
+                }
+            }
+        }
+        
+        // Creating an instance of the class
+        let student = new Students("John", 20, "Year 2");
+        document.write(student.intro())
+        // Calling the static method with the instance's year_level
+        document.write(Students.pass(student.year_level));
     </script>
 </body>
 </html>

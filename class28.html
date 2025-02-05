@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p>Finding the error</p>
+    <p id = "err_text"></p>
+    <script>
+        try{
+            document.write(x+y+z)
+        }
+        catch(err){
+            document.getElementById("err_text").innerHTML = err.message;
+        }
+    </script>
+</body>
+</html>

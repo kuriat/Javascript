@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let numberTrue = true;
+        let number;
+        let counter = 0;
+
+        // While loop to generate 10 random numbers
+        while (numberTrue === true) {
+            number = Math.floor(Math.random() * 100); // Random number between 0 and 99
+            document.write(number + "<br>");
+            counter++;
+
+            if (counter >= 10) {
+                numberTrue = false; // Stop the loop after 10 iterations
+            }
+        }
+    </script>
+</body>
+</html>
+

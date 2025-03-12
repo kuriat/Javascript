@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        p{
+            border: 2px solid;
+            border-radius:10px;
+            padding-bottom: 10px;
+            padding-top: 5px;
+            padding-left: 10px;
+            background-color: rgba(180, 245, 245, 0.959);
+        }
+    </style>
+</head>
+<body>
+    <p id = "day"></p>
+    <p id = "month"></p>
+    <p id = "year"></p>
+    <p id = "date"></p>
+    <script>
+        const date = new Date();
+        var dayNumber = date.getDate();
+        var dayOfWeek = date.getDay();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+    
+        function getDayofWeek() {
+            var day;
+            if (dayOfWeek == 0) {
+                day = "Sunday";
+            } else if (dayOfWeek == 1) {
+                day = "Monday";
+            } else if (dayOfWeek == 2) {
+                day = "Tuesday";
+            } else if (dayOfWeek == 3) {
+                day = "Wednesday";
+            } else if (dayOfWeek == 4) {
+                day = "Thursday";
+            } else if (dayOfWeek == 5) {
+                day = "Friday";
+            } else if (dayOfWeek == 6) {
+                day = "Saturday";
+            }
+            return day;
+        }
+        function getMonths() {
+            var monthName;
+            if (month == 1) {
+                monthName = "January"
+            } else if (month == 2) {
+                monthName = "Feburary"
+            } else if (month == 3) {
+                monthName = "March";
+            } else if (month == 4) {
+                monthName = "April";
+            } else if (month == 5) {
+                monthName = "May";
+            } else if (month == 6) {
+                monthName = "June";
+            } else if (month == 7) {
+                monthName = "July";
+            }else if (month == 8) {
+                 monthName = "August"
+            
+            }else if (month == 9) {
+                  monthName = "September"
+            
+            }else if (month == 10) {
+                 monthName = "October"
+            
+            }else if (month == 11) {
+                 monthName = "November"
+            
+            }else if (month == 12) {
+                 monthName = "December"
+}
+return monthName;
+}
+    
+        var day = getDayofWeek();
+        var monthName = getMonths();
+        document.getElementById("day").innerHTML = day + " the " + dayNumber+"th";
+        document.getElementById("month").innerHTML = monthName
+        document.getElementById("year").innerHTML = year
+        document.getElementById("date").innerHTML = dayNumber + "/"+ month+"/"+year
+    </script>
+    
+</body>
+</html>

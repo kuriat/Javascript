@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p id="Array"></p>
+    <p id="newSortedMappedArray"></p>
+    
+    <script>
+        
+        var array = [3, 45, 76, 98, 34, 12, 31, 4657879762];
+    
+
+        var multiplier = 10; 
+    
+      
+        function updateArrays() {
+            
+            var newarray = array.map(function(num) {
+                return num * multiplier;
+            });
+            sortedarray = newarray.sort(function(a, b){ return a - b})
+            
+            document.getElementById("Array").innerHTML = "Original Array: " + array.join(", ");
+    
+            
+            document.getElementById("newSortedMappedArray").innerHTML = "Mapped and Sorted Array: " + sortedarray.join(", ");
+        }
+    
+        
+        updateArrays();
+    </script>
+    
+</body>
+</html>

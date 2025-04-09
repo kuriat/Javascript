@@ -1,0 +1,21 @@
+var myForm = document.getElementById("myForm");
+var myInput = document.getElementById("myInput");
+var myList = document.getElementById("myList");
+
+myForm.addEventListener("submit", function(event){
+event.preventDefault();
+createItem(myInput.value);
+});
+function createItem(input){
+    //var items = '<li>'+ input +"<button onclick = 'deleteElement(this)'>Delete</button>"+'</li>'
+
+    var items = `<li>${input}
+    <button onclick="deleteElement(this)">Delete</button></li>`;
+    myList.insertAdjacentHTML("beforeend", items);
+    myInput.value = "";
+    myInput.focus();
+
+} 
+function deleteElement(f){
+    f.parentElement.remove();
+}
